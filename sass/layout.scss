@@ -1,0 +1,67 @@
+.player-1,
+.player-2 {
+    width: 50%;
+    height: 100%;
+
+}
+
+.player-1,.player-2
+{
+    background: $color-grey-light;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    &__identity {
+
+        font-size: 4rem;
+        text-transform: uppercase;
+        margin: 1rem 0;
+        font-family: 'Orbitron',sans-serif;
+        font-weight: 400;
+        letter-spacing: 3px;
+        
+        display: flex;
+        align-items: center;
+        
+    }
+
+    &__score {
+        font-size: 8rem;
+        font-weight: 200;
+        letter-spacing: 3px;
+        color: $color-primary;
+        font-family: 'Raleway', sans-serif;
+    }
+    &__reward {
+        display: flex;
+        margin-top: auto;
+        flex-direction: column;
+        align-items: center;
+        width: 6rem;
+        padding: 1rem 7rem;
+        background: $color-light-blue-1;
+        &-heading {
+            color: $color-grey-dark-1;
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 0.6rem;
+        }
+        &-score {
+            color: white;
+            font-size: 5rem;
+ font-family: 'Montserrat', sans-serif;
+        }
+    }
+
+
+}
+
+.player-2 {
+    background: #fff;
+}
+.active-icon{
+    font-size: 2rem;
+    margin-left: 2rem;
+}
