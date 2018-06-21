@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+
+    font-size: 62.5%;
+    font-family: 'Roboot', sans-serif;
+}
+
+///////////////////
+///variables
+
+$color-primary: #ff9800;
+$color-primary-light-1:#ffa726;
+$color-primary-light-2:#ffb74d;
+
+$color-light-blue-1: #40c4ff;
+$color-light-blue-2: #80d8ff;
+
+$color-grey-dark-3:#777;
+$color-grey-dark-3:#999;
+$color-grey-dark-1:#333;  
+
+$color-grey-light:#f7f7f7;
+
+body{
+    background-image: linear-gradient(to right bottom,$color-primary,$color-primary-light-1); 
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
+ 
