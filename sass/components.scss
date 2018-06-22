@@ -1,6 +1,5 @@
 ///////////container
-
-.container{
+.container {
     background: #fff;
     width: 80%;
     height: 50rem;
@@ -10,4 +9,61 @@
     margin-top: 8rem;
     display: flex;
     overflow: hidden;
+    position: relative;
+
+}
+
+.btn {
+
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    color: $color-grey-dark-1;
+    font-weight: 100;
+    transition: all 0.3s;
+    &-newgame {}
+    &-spin {
+        margin-top: auto;
+    }
+    &-hold {
+        margin: 2rem 0;
+
+    }
+
+    &-icons {
+        width: 1rem;
+        height: 1rem;
+        color: $color-primary;
+        margin-right: 0.8rem;
+        transition: all 0.3s;
+
+    }
+
+    &:hover &-icons {
+        margin-right: 1.5rem;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline: none;
+    }
+    &:active {
+        transform: translateY(3px);
+    }
+}
+
+.dice {
+    box-shadow: 0 10px 6rem rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 30%;
+
+    &-icon {
+        width: 10rem;
+        height: 10rem;
+    }
 }

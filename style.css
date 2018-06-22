@@ -24,7 +24,44 @@ body {
   border-radius: 4px;
   margin-top: 8rem;
   display: flex;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
+
+.btn {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  color: #333;
+  font-weight: 100;
+  transition: all 0.3s; }
+  .btn-spin {
+    margin-top: auto; }
+  .btn-hold {
+    margin: 2rem 0; }
+  .btn-icons {
+    width: 1rem;
+    height: 1rem;
+    color: rgba(54, 212, 6, 0.83);
+    margin-right: 0.8rem;
+    transition: all 0.3s; }
+  .btn:hover .btn-icons {
+    margin-right: 1.5rem; }
+  .btn:hover {
+    cursor: pointer; }
+  .btn:focus {
+    outline: none; }
+  .btn:active {
+    transform: translateY(3px); }
+
+.dice {
+  box-shadow: 0 10px 6rem rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 30%; }
+  .dice-icon {
+    width: 10rem;
+    height: 10rem; }
 
 .player-1,
 .player-2 {
@@ -77,5 +114,15 @@ body {
 .active-icon {
   font-size: 2rem;
   margin-left: 2rem; }
+
+.operate {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  height: 100%;
+  align-items: center; }
 
 /*# sourceMappingURL=style.css.map */
