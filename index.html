@@ -1,46 +1,54 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
+
+<head>
     <meta name="viewport" content="width=width-device initial-scale=1">
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Orbitron:400,500|Raleway:100,200,300,400,600,700|Roboto:100,300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-</head>
+ 
+  </head>
 
 <body>
 
     <div class="container">
         <div class="player-1">
-            <div class="player-1__identity">Player 1 <span class="active-icon"><i class="fas fa-circle fa-1x"></i></span></div>
-            <div class="player-1__score">45</div>
+           
+            <div class="player-1__identity player_active" id="player-0">Player 1
+            <div id="active-0" class="active-icon"></div>
+            </div>
+            
+            <div class="player-1__score" id="score-0">45</div>
             <div class="player-1__reward">
                 <div class="player-1__reward-heading">CURRENT</div>
-                <div class="player-1__reward-score">0</div>
+                <div class="player-1__reward-score" id="current-score-0">0</div>
             </div>
         </div>
         <div class="player-2">
-           <div class="player-2__identity">Player 2 <span class="active-icon"><i class="fas fa-circle fa-1x"></i></span></div>
-            <div class="player-2__score">22</div>
+           
+            <div class="player-2__identity" id="player-1">Player 2
+            <div id="active-1"></div>
+            </div>
+            
+            <div class="player-2__score" id="score-1">22</div>
             <div class="player-2__reward">
                 <div class="player-2__reward-heading">CURRENT</div>
-                <div class="player-2__reward-score">14</div>
+                <div class="player-2__reward-score" id="current-score-1">14</div>
             </div>
         </div>
 
-       <div class="operate">
-           <button class="btn btn-newgame"><span class="btn-icons"><i class="fas fa-plus-circle"></i></span>new game</button>
-           <div class="dice"><img src="Images/dice-1.png" alt="dice" class="dice-icon"></div>
-           <button class="btn btn-spin"><span class="btn-icons"><i class="fas fa-sync-alt"></i></span>Roll dice</button>
-           <button class="btn btn-hold"><span class="btn-icons"><i class="fas fa-download"></i></span>Hold</button>
-       </div>
+        <div class="operate">
+            <button class="btn btn-newgame"><span class="btn-icons"><i class="fas fa-plus-circle"></i></span>new game</button>
+            <div class="dice"><img src="Images/dice-1.png" alt="dice" class="dice-icon"></div>
+            <button class="btn btn-spin"><span class="btn-icons"><i class="fas fa-sync-alt"></i></span>Roll dice</button>
+            <button class="btn btn-hold"><span class="btn-icons"><i class="fas fa-download"></i></span>Hold</button>
+        </div>
         <!--
     <i class="fas fa-dice-two"></i>-->
     </div>
-
+   <script src="script.js"></script>
 </body>
-</html>
 
-    
- 
+</html>
