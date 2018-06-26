@@ -1,5 +1,7 @@
-var scores, roundScore, activePlayer, gamePlaying;
-var diceDom = document.querySelector('.dice-icon');
+var scores, roundScore, activePlayer, gamePlaying, winningScore;
+
+var diceDom_1 = document.querySelector('.dice-icon-1');
+var diceDom_2 = document.querySelector('.dice-icon-2');
 
 
 
@@ -8,7 +10,10 @@ var diceDom = document.querySelector('.dice-icon');
 //Initialise
 function initialise() {
     gamePlaying = true;
-    document.querySelector('.dice-icon').style.display = 'none';
+    document.querySelector('.win-score__value').disabled = false;
+    document.querySelector('.win-score__value').value = "";
+    document.querySelector('.dice-icon-1').style.display = 'none';
+    document.querySelector('.dice-icon-2').style.display = 'none';
     document.querySelector('#score-0').textContent = "0";
     document.querySelector('#score-1').textContent = "0";
     document.querySelector('#current-score-0').textContent = "0";
@@ -56,14 +61,20 @@ function nextPlayer() {
 document.querySelector('.btn-spin').addEventListener('click', function () {
 
     if (gamePlaying) {
+        winningScore = document.querySelector('.win-score__value').value;
 
-        var dice = Math.floor(Math.random() * 6) + 1;
+        document.querySelector('.win-score__value').disabled = true;
+        var dice_1 = Math.floor(Math.random() * 6) + 1;
+        var dice_2 = Math.floor(Math.random() * 6) + 1;
 
-        diceDom.style.display = 'block';
-        diceDom.src = "Images/dice-" + dice + ".png";
+        diceDom_1.style.display = 'block';
+        diceDom_2.style.display = 'block';
 
-        if (dice !== 1) {
-            roundScore += dice;
+        diceDom_1.src = "Images/dice-" + dice_1 + ".png";
+        diceDom_2.src = "Images/dice-" + dice_2 + ".png";
+
+        if ((dice_1 !== 1) && (dice_2 !== 1)) {
+            roundScore += (dice_1 + dice_2);
             document.querySelector('#current-score-' + activePlayer).textContent = roundScore;
 
         } else {
@@ -86,10 +97,12 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
 
         roundScore = 0;
         document.querySelector('#current-score-' + activePlayer).textContent = roundScore;
-        diceDom.src = "Images/dice-1.png";
-        if (scores[activePlayer] >= 100) {
+        diceDom_1.src = "Images/dice-1.png";
+        diceDom_2.src = "Images/dice-1.png";
+        if (scores[activePlayer] >= winningScore) {
             document.querySelector('#player-' + activePlayer).textContent = "Winner!";
-            document.querySelector('.dice-icon').style.display = 'none';
+            document.querySelector('.dice-icon-1').style.display = 'none';
+            document.querySelector('.dice-icon-2').style.display = 'none';
             document.querySelector('#player-1').classList.remove('active-icon');
             document.querySelector('#player-0').classList.remove('active-icon');
             gamePlaying = false;
