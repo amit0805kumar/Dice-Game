@@ -27,6 +27,7 @@ function initialise() {
     document.querySelector('#player-1').classList.remove('active-icon');
     document.querySelector('#player-1').classList.remove('player_active');
     activePlayer = 0;
+
 }
 initialise();
 
@@ -61,8 +62,13 @@ function nextPlayer() {
 document.querySelector('.btn-spin').addEventListener('click', function () {
 
     if (gamePlaying) {
-        winningScore = document.querySelector('.win-score__value').value;
-
+        var input = document.querySelector('.win-score__value').value;
+        if(input){
+            winningScore = input;
+        } else {
+            winningScore = 50;
+        }
+        
         document.querySelector('.win-score__value').disabled = true;
         var dice_1 = Math.floor(Math.random() * 6) + 1;
         var dice_2 = Math.floor(Math.random() * 6) + 1;
