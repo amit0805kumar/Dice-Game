@@ -87,7 +87,7 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
         roundScore = 0;
         document.querySelector('#current-score-' + activePlayer).textContent = roundScore;
         diceDom.src = "Images/dice-1.png";
-        if (scores[activePlayer] >= 20) {
+        if (scores[activePlayer] >= 100) {
             document.querySelector('#player-' + activePlayer).textContent = "Winner!";
             document.querySelector('.dice-icon').style.display = 'none';
             document.querySelector('#player-1').classList.remove('active-icon');
