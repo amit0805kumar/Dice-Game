@@ -61,43 +61,48 @@ body {
     width: 10rem;
     height: 10rem; }
 
-.active-icon {
+.player_active {
+  color: #f44336; }
+
+.active-icon::after {
+  content: "";
   background: #40c4ff;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
   transform: translateX(1rem); }
 
-.player_active {
-  color: #f44336; }
-
 .player-1,
 .player-2 {
   width: 50%;
   height: 100%; }
 
-.player-1, .player-2 {
+.player-1,
+.player-2 {
   background: #f4eeee;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 3rem; }
-  .player-1__identity, .player-2__identity {
+  .player-1__identity,
+  .player-2__identity {
     font-size: 4rem;
     text-transform: uppercase;
     margin: 1rem 0;
-    font-family: 'Orbitron',sans-serif;
+    font-family: 'Orbitron', sans-serif;
     font-weight: 400;
     letter-spacing: 3px;
     display: flex;
     align-items: center; }
-  .player-1__score, .player-2__score {
+  .player-1__score,
+  .player-2__score {
     font-size: 8rem;
     font-weight: 200;
     letter-spacing: 3px;
     color: rgba(54, 212, 6, 0.83);
-    font-family: 'Raleway', sans-serif; }
-  .player-1__reward, .player-2__reward {
+    font-family: 'Roboto', sans-serif; }
+  .player-1__reward,
+  .player-2__reward {
     display: flex;
     margin-top: auto;
     flex-direction: column;
@@ -105,23 +110,21 @@ body {
     width: 6rem;
     padding: 1rem 7rem;
     background: #40c4ff; }
-    .player-1__reward-heading, .player-2__reward-heading {
+    .player-1__reward-heading,
+    .player-2__reward-heading {
       color: #333;
       font-size: 2rem;
       font-weight: 300;
       letter-spacing: 2px;
       margin-bottom: 0.6rem; }
-    .player-1__reward-score, .player-2__reward-score {
+    .player-1__reward-score,
+    .player-2__reward-score {
       color: white;
       font-size: 5rem;
       font-family: 'Montserrat', sans-serif; }
 
 .player-2 {
   background: #fff; }
-
-.active-icon {
-  font-size: 2rem;
-  margin-left: 2rem; }
 
 .operate {
   position: absolute;
