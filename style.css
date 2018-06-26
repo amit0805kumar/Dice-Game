@@ -18,7 +18,7 @@ body {
 .container {
   background: #fff;
   width: 80%;
-  height: 50rem;
+  height: 55rem;
   margin-left: 50%;
   transform: translateX(-50%);
   border-radius: 4px;
@@ -37,7 +37,7 @@ body {
   font-weight: 100;
   transition: all 0.3s; }
   .btn-spin {
-    margin-top: auto; }
+    margin-top: 2rem; }
   .btn-hold {
     margin: 2rem 0; }
   .btn-icons {
@@ -53,13 +53,21 @@ body {
   .btn:focus {
     outline: none; }
 
-.dice {
+.dice-1,
+.dice-2 {
   box-shadow: 0 10px 6rem rgba(0, 0, 0, 0.1);
-  position: absolute;
-  top: 30%; }
-  .dice-icon {
-    width: 10rem;
-    height: 10rem; }
+  position: absolute; }
+
+.dice-icon-1,
+.dice-icon-2 {
+  width: 10rem;
+  height: 10rem; }
+
+.dice-1 {
+  top: 15%; }
+
+.dice-2 {
+  top: 40%; }
 
 .player_active {
   color: #f44336; }
@@ -71,6 +79,22 @@ body {
   height: 2rem;
   border-radius: 50%;
   transform: translateX(1rem); }
+
+.win-score {
+  margin-top: auto;
+  align-self: center; }
+  .win-score__value {
+    padding: 4px;
+    border-radius: 100px;
+    border: none;
+    border: 1px solid #000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    letter-spacing: 3px; }
+    .win-score__value:focus {
+      outline: none; }
 
 .player-1,
 .player-2 {
